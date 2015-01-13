@@ -1,32 +1,40 @@
-<!doctype html>
-<html lang='es'>
-<head>
-<meta charset='UTF-8'>
-<title>Mi primera página en PHP</title>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-</head>
-<body>
-<h1>Mi <a id='enlace' href="#">primera web</a></h1>
-<div id="redondo"></div>
-<?php
-echo'hola mundo';
-?>
-<?php
-echo 5*3;
-echo '5'*'3';
-echo '<h1>Dolores</h1><p>Hola, primer programa</p>'
-echo <<<BIOGRAFIA<h1>Esta es mi vida</h1>
-<ol>
-	<li>Nazco</li>
-	<li>Nazco</li>
-	<li>Nazco</li>
-	<li>Nazco</li>
-</ol>
- ?>
-</body>
-<script>
-document.getElementById('enlace').innerHTML='web javascript';
-document.getElementById('enlace').style.color='pink';
-</script>
-</html>
-p
+<?php include("include/header.php");?>	
+	<div class='container'>
+		<form method='post' action='procSaludos.php'>
+		<form class="form-horizontal">
+  <div class="form-group">
+    <label name='nombre'for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
+    <div class="col-sm-10">
+      <input name='nombre'type="text" class="form-control" id="text3" placeholder="Escribe tu nombre">
+    </div>
+  </div>
+  <div class="form-group">
+    <label name='email'for="inputPassword3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input name='email' type="email" class="form-control" id="email"placeholder="Escribe tu email" >
+    </div>
+	<label for="poblacion" class="col-sm-2 control-label">Población</label>
+    <div class="col-sm-10">
+      <input name='poblacion'type="text" class="form-control" id="text3" placeholder="Escribe tu ciudad">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Enviar</button>
+    </div>
+  </div>
+</form>
+		<!-- <label for='nombre'> Nombre </label> 
+		<input name='nombre' type='text'placeholder='Escribe tu nombre' required>
+		<label for='password'>Contraseña</label>
+		<input name='password' type='password' placeholder='Escribe tu contaseña' required>
+		
+		<button>Enviar</button>
+		</form>
+		</div>-->
+<?php include("include/footer.php");?>	
